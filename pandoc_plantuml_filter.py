@@ -50,8 +50,8 @@ def plantuml(key, value, format_, _):
                     f.write(txt)
                 
                 print(PLANTUML_BIN.split() + ["-t" + filetype, src])
-                subprocess.check_call(PLANTUML_BIN.split() +
-                                      ["-t" + filetype, src])
+                # subprocess.check_call(PLANTUML_BIN.split() +
+                #                      ["-t" + filetype, src])
                 sys.stderr.write('Created image ' + dest + '\n')
 
             # Update symlink each run
