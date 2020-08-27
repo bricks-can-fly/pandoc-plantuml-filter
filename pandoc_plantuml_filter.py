@@ -49,8 +49,7 @@ def plantuml(key, value, format_, _):
                 with open(src, "wb") as f:
                     f.write(txt)
 
-                sys.stderr.write(PLANTUML_BIN.split() +
-                                 ["-t" + filetype, src])
+                sys.stderr.write(PLANTUML_BIN.split())
                 # subprocess.check_call(PLANTUML_BIN.split() +
                 #                      ["-t" + filetype, src])
                 sys.stderr.write('Created image ' + dest + '\n')
