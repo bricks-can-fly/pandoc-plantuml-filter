@@ -48,7 +48,8 @@ def plantuml(key, value, format_, _):
                     txt = b"@startuml\n" + txt + b"\n@enduml\n"
                 with open(src, "wb") as f:
                     f.write(txt)
-
+                
+                print(PLANTUML_BIN.split() + ["-t" + filetype, src])
                 subprocess.check_call(PLANTUML_BIN.split() +
                                       ["-t" + filetype, src])
                 sys.stderr.write('Created image ' + dest + '\n')
