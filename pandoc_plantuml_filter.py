@@ -49,9 +49,7 @@ def plantuml(key, value, format_, _):
                 with open(src, "wb") as f:
                     f.write(txt)
 
-                subprocess.check_call(" ".join(["java", "-jar", PLANTUML_BIN.split(), "-t" + filetype, src]))
-                # subprocess.check_call(PLANTUML_BIN.split() +
-                #                      ["-t" + filetype, src])
+                subprocess.check_call(" ".join(["java", "-jar", PLANTUML_BIN.split(), "-t", filetype, src]))
                 sys.stderr.write('Created image ' + dest + '\n')
 
             # Update symlink each run
